@@ -14,7 +14,7 @@ for movie in movie_list
 	stars =  doc_new.css('table.cast_list tr td.itemprop a')
 		star_array=[]
 		for star in stars
-			star_array << star.text.strip
+			star_array << star.text.strip.downcase
 		end
 	hash[movie.text] = star_array
 end
