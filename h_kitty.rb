@@ -11,9 +11,11 @@ array.each do |pair|
 	pair = pair.split(' ')
 	word = pair[0]
 	number = pair[1].to_i
-	while number != 0
-		print word
-		number -= 1
+	len = word.length
+	while word.length != number*len
+		word<<word
 	end
+	print word
 end
+
 #print word.split("").rotate.join("")
